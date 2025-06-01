@@ -1,0 +1,14 @@
+﻿﻿@model EasyBBS.Models.BoardListModel
+@{
+    Layout = "~/Views/Shared/_BaseLayout.cshtml";
+    ViewBag.Title = "掲示板の一覧";
+}
+
+@foreach (var board in Model.Boards)
+{
+    <div>
+        <p>
+            @Html.ActionLink(@board.Title, "Show", new { id = board.Id })
+        </p>
+    </div>
+}
