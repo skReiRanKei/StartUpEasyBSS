@@ -4,32 +4,54 @@
     ViewBag.Title = Model.Title;
 }
 
-@* 掲示板情報 *@
+@* 掲示板情報ヘッダー部分 *@
 <div>
-    <p>@Model.Title</p>
-    <p>@Model.Text</p>
+    <h2>@Model.Title</h2>
+    <p>投稿日時: @Model.PostedDate.ToString("yyyy/MM/dd HH:mm")</p>
+    <hr /> @* 区切り線を追加して、本文と区別する *@
+</div>
+@* 掲示板本文 *@
+<div>
+    <p>
+        @Html.Raw(Model.Text.Replace("\n", "<br />")) @* 本文を整形して表示 *@
+    </p>
 </div>
 
+<hr /> @* アクションリンクとの区切り線 *@
+<div>
+    <p>
+        @Html.ActionLink("一覧に戻る", "Index") |
+        @Html.ActionLink("編集", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("この掲示板を削除", "Delete", new { id = Model.Id })
+    </p>
+</div>
 @* 返信 *@
-@if (Model.Posts != null)
+<h3>返信</h3> @* 返信セクションの見出し *@
+@if (Model.Posts != null && Model.Posts.Any()) // 返信がある場合のみ表示
 {
+
     <div>
         @foreach (var post in Model.Posts)
         {
-            <div>
-                @post.Text
+            <div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 5px;">
+                <p>@post.Text</p>
             </div>
         }
     </div>
 }
+else
+{
+    <p>まだ返信はありません。</p>
+}
 
 @* 返信投稿フォーム *@
+<h3>返信を投稿する</h3> @* 返信フォームの見出し *@
 <div>
     @using (Html.BeginForm("PostResponse", "Board", new { Id = Model.Id }, FormMethod.Post))
     {
         <div>
-            @Html.TextArea("Text", "")
+            @Html.TextArea("Text", "", new { rows = 5, cols = 60, placeholder = "返信内容を入力してください" }) @* テキストエリアのサイズとプレースホルダー *@
         </div>
-        <input type="submit" value="投稿" />
+        <input type="submit" value="返信を投稿" class="btn btn-primary" /> @* ボタンの表示変更例 *@
     }
 </div>

@@ -1,0 +1,52 @@
+﻿﻿@model EasyBBS.Models.BoardEntity
+@{
+    ViewBag.Title = "削除確認";
+}
+
+
+<h2>削除確認</h2>
+
+<h3>本当にこの掲示板投稿を削除しますか？</h3>
+<div>
+    <h4>掲示板投稿</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            タイトル:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            投稿日時:
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PostedDate)
+        </dd>
+
+        <dt>
+            メッセージ:
+        </dt>
+        <dd>
+            @Html.Raw(Model.Text.Replace("\n", "<br />"))
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm("Delete", "Board", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="削除" class="btn btn-danger" /> |
+            @Html.ActionLink("一覧に戻る", "Index")
+        </div>
+    }
+</div>
+
+<hr /> @* アクションリンクとの区切り線 *@
+<div>
+    <p>
+        @Html.ActionLink("ホームに戻る", "Index", "Base")
+    </p>
+</div>

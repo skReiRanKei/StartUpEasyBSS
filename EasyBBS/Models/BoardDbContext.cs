@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
@@ -27,6 +28,12 @@ namespace EasyBBS.Models
         /// </summary>
         [Required]
         public string Text { get; set; }
+
+        /// <summary>
+        /// 投稿時間
+        /// </summary>
+        [Required]
+        public DateTime PostedDate { get; set; }
 
         /// <summary>
         /// 返信
@@ -70,6 +77,9 @@ namespace EasyBBS.Models
         /// </summary>
         public virtual DbSet<BoardEntity> Boards { get; set; }
 
-
+        /// <summary>
+        /// DBの掲示板の返信情報を参照
+        /// </summary>
+        public virtual DbSet<BoardPostEntity> BoardPostEntities { get; set; }
     }
 }

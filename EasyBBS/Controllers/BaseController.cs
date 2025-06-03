@@ -18,13 +18,15 @@ namespace EasyBBS.Controllers
         /// <returns></returns>
         public ActionResult Index()
         {
-            // 掲示板の件数を取得
-            int boardCount = db.Boards.Count();
-
-            // ViewBagを使ってビューに件数を渡す
-            ViewBag.BoardCount = boardCount;
-
+            ViewBag.BoardCount = db.Boards.Count();
+            var latestBoards = db.Boards
+                               .OrderByDescending(b => b.PostedDate) // 投稿日時が新しい順
+                               .Take(3) // 上位3件
+                               .ToList();
+            // 取得した最新投稿をViewBagに格納してビューに渡す
+            ViewBag.LatestBoards = latestBoards;
             return View();
+
         }
         protected override void Dispose(bool disposing)
         {

@@ -3,16 +3,72 @@
     ViewBag.Title = "掲示板Top";
 }
 
+<style>
+   
+    .board-summary {
+        border: 1px solid #ddd;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+        .board-summary h4 {
+            margin-top: 0;
+            color: #337ab7;
+        }
+
+        .board-summary p {
+            font-size: 0.9em;
+            color: #555;
+        }
+</style>
+
+<div>
+    <h2>掲示板トップ</h2>
+</div>
+<hr />
 
 <div>
     <h3>掲示板の件数</h3>
     <p>現在、<span style="font-weight: bold; color: blue;">@ViewBag.BoardCount</span> 件の掲示板があります。</p>
 </div>
-<hr />
-<div>
-    @Html.ActionLink("掲示板一覧", "", "Board")
-</div>
-<div>
-    @Html.ActionLink("掲示板追加", "Create", "Board")
-</div>
 
+<hr />
+
+<h3>最新の掲示板投稿</h3>
+@if (ViewBag.LatestBoards != null && ViewBag.LatestBoards.Count > 0)
+{
+    foreach (var board in ViewBag.LatestBoards)
+    {
+        <div class="board-summary">
+           
+            <p>
+                @if (!string.IsNullOrEmpty(board.Text) && board.Text.Length > 100)
+                {
+                    @Html.Raw(board.Text.Substring(0, 100) + "...") @* 本文の冒頭100文字と省略記号 *@
+                }
+                else
+                {
+                    @Html.Raw(board.Text)
+                }
+            </p>
+            <p>
+                <small>投稿日時: @board.PostedDate.ToString("yyyy/MM/dd HH:mm")</small>
+            </p>
+        </div>
+    }
+}
+else
+{
+    <p>まだ投稿された掲示板はありません。</p>
+}
+
+<hr />
+
+<div>
+    @Html.ActionLink("掲示板一覧へ", "Index", "Board", null, new { @class = "btn btn-info" }) 
+</div>
+<div>
+    @Html.ActionLink("新しい掲示板を立てる", "Create", "Board", null, new { @class = "btn btn-success" }) 
+</div>
