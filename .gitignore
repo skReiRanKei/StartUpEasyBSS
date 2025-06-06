@@ -1,0 +1,35 @@
+# Visual Studio temporary files
+.vs/
+*.suo
+*.user
+*.aps
+*.pdb
+*.obj
+*.ncb
+*.opensdf
+*.sdf
+
+# Build outputs
+[Bb]in/        # bin フォルダ (大文字小文字両方対応)
+[Oo]bj/        # obj フォルダ (大文字小文字両方対応)
+[Dd]ebug/      # Debug フォルダ
+[Rr]elease/    # Release フォルダ
+*.exe          # 実行可能ファイル
+*.dll          # DLLファイル
+*.nupkg        # NuGet パッケージ
+
+# Resharper/Rider files
+.idea/
+*.DotSettings
+*.csproj.DotSettings
+
+# Packages folder (if not using PackageReference in .csproj)
+packages/
+
+# Local settings
+*.config.user  # Web.config.user など
+*.bak          # バックアップファイル
+
+# Other common temporary files
+Temp/
+tmp/
