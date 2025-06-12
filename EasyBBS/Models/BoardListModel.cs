@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using static EasyBBS.Models.ApplicationDbContext;
 
 namespace EasyBBS.Models
 {
@@ -17,7 +18,7 @@ namespace EasyBBS.Models
         /// 
         /// </summary>
         /// <param name="db"></param>
-        public BoardListModel(BoardDbContext db)
+        public BoardListModel(ApplicationDbContext db)
         {
             Boards = db.Boards.ToList();
         }

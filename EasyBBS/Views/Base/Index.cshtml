@@ -24,9 +24,7 @@
         }
 </style>
 
-<div>
-    <h2>掲示板トップ</h2>
-</div>
+
 <hr />
 
 <div>
@@ -67,8 +65,8 @@ else
 <hr />
 
 <div>
-    @Html.ActionLink("掲示板一覧へ", "Index", "Board", null, new { @class = "btn btn-info" }) 
+    @Html.ActionLink("掲示板一覧へ", "Index", "Board", null, new { @class = "btn btn-link" }) 
 </div>
 <div>
-    @Html.ActionLink("新しい掲示板を立てる", "Create", "Board", null, new { @class = "btn btn-success" }) 
+    @Html.ActionLink("新しい掲示板を立てる", "Create", "Board", null, new { @class = "btn btn-link" }) 
 </div>

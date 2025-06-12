@@ -1,15 +1,71 @@
-﻿<!DOCTYPE html>
-
+﻿@using System.Web.Optimization 
+@using Microsoft.AspNet.Identity 
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - YourBBS</title>
+    @Styles.Render("~/Content/css")
 </head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <body>
-    <div>
-        @RenderBody()
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @if (ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString() != "Account")
+                    {
+                        <li>@Html.ActionLink("掲示板一覧", "Index", "Board")</li>
+                    }
+                </ul>
+
+                @using Microsoft.AspNet.Identity
+                @if (ViewContext.Controller.ValueProvider.GetValue("controller").RawValue.ToString() != "Account")
+                {
+                    if (Request.IsAuthenticated)
+                    {
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                @Html.ActionLink("こんにちは " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                            </li>
+                            <li><a href="javascript:document.getElementById('logoutForm').submit()">ログアウト</a></li>
+                        </ul>
+                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                        {
+                            @Html.AntiForgeryToken()
+                        }
+                    }
+                    else
+                    {
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>@Html.ActionLink("登録", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                            <li>@Html.ActionLink("ログイン", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+                        </ul>
+                    }
+
+                }
+
+
+            </div>
+        </div>
     </div>
-    @RenderSection("Scripts", required: false)
+
+
+    <div class="main-page-content-wrapper">
+        <div class="container body-content">
+            @RenderBody()
+        </div>
+    </div>
+
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - My 掲示板アプリ</p>
+    </footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @* @Scripts.Render("~/bundles/bootstrap") *@
+    @RenderSection("scripts", required: false)
 </body>
 </html>

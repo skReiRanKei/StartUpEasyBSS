@@ -1,51 +1,57 @@
-﻿@model EasyBBS.Models.BoardEntity
+﻿
+@model EasyBBS.Models.ApplicationDbContext.BoardEntity
 @{
     Layout = "~/Views/Shared/_BaseLayout.cshtml";
     ViewBag.Title = "掲示板を編集";
 }
 
-<h2>掲示板を編集</h2>
+<div class="main-page-content-wrapper">
+    <div class="container">
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
+        <h2 class="text-center my-4">@ViewBag.Title</h2> 
 
-    <div class="form-horizontal">
-        <h4>掲示板投稿</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.Id)
-        @Html.HiddenFor(model => model.PostedDate)
+        @using (Html.BeginForm("Edit", "Board", FormMethod.Post, new { @class = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="my-4">
+                <hr class="my-4" />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.Id)
+                @Html.HiddenFor(model => model.PostedDate)
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                <div class="form-group row my-3">
+                    @Html.LabelFor(model => model.Title, new { @class = "col-sm-2 col-form-label" }) 
+                    <div class="col-sm-10">
+
+                        @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group row my-3">
+
+                    @Html.LabelFor(model => model.Text, new { @class = "col-sm-2 col-form-label" }) 
+                    <div class="col-sm-10">
+
+                        @Html.TextAreaFor(model => model.Text, new { @class = "form-control", rows = 10 })
+                        @Html.ValidationMessageFor(model => model.Text, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center my-4">
+                    <button type="submit" value="保存" class="btn btn-primary btn-lg">保存</button> 
+                </div>
             </div>
+        }
+        <hr class="my-4" />
+        <div class="text-center mb-4">
+            @Html.ActionLink("一覧に戻る", "Index", null, new { @class = "btn btn-secondary me-2" }) 
+            @Html.ActionLink("詳細に戻る", "Show", new { id = Model.Id }, new { @class = "btn btn-outline-info me-2" }) 
+            @Html.ActionLink("ホームに戻る", "Index", "Base", null, new { @class = "btn btn-outline-dark" }) 
         </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Text, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextAreaFor(model => model.Text, new { @class = "form-control", rows = 10 })
-                @Html.ValidationMessageFor(model => model.Text, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="保存" class="btn btn-primary" />
-            </div>
-        </div>
-    </div>  }
-<hr />
-<div>
-    @Html.ActionLink("一覧に戻る", "Index") |
-    @Html.ActionLink("詳細に戻る", "Show", new { id = Model.Id })
-    @Html.ActionLink("ホームに戻る", "Index", "Base")
+    </div>
 </div>
 
 @section Scripts {
-    Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryval")
 }

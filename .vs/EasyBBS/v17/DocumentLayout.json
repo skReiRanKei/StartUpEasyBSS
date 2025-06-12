@@ -3,47 +3,88 @@
   "WorkspaceRootPath": "C:\\Users\\user\\gitBss\\hubBss\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\views\\base\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\views\\base\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\views\\board\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\views\\board\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\views\\board\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\views\\board\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\views\\board\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\views\\board\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\views\\board\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\views\\board\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\views\\board\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\views\\board\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C550D24C-9666-49FC-915C-9F0C7ACBAF47}|EasyBBS.Tests\\EasyBBS.Tests.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs.tests\\controllers\\boardcontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C550D24C-9666-49FC-915C-9F0C7ACBAF47}|EasyBBS.Tests\\EasyBBS.Tests.csproj|solutionrelative:easybbs.tests\\controllers\\boardcontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\models\\identitymodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\models\\identitymodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\models\\boardpostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\models\\boardpostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\models\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\models\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\models\\boardcreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\models\\boardcreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\controllers\\boardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\controllers\\boardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|C:\\Users\\user\\gitBss\\hubBss\\easybbs\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|C:\\Users\\user\\gitBss\\hubBss\\easybbs\\models\\boardcreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\models\\boardcreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|C:\\Users\\user\\gitBss\\hubBss\\easybbs\\views\\base\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\views\\base\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|C:\\Users\\user\\gitBss\\hubBss\\easybbs\\models\\boardpostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\models\\boardpostmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\app_start\\startup.auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\app_start\\startup.auth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|C:\\Users\\user\\gitBss\\hubBss\\easybbs\\models\\boardlistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\models\\boardlistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|C:\\Users\\user\\gitBss\\hubBss\\easybbs\\models\\boarddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\models\\boarddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|C:\\Users\\user\\gitBss\\hubBss\\easybbs\\views\\board\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\views\\board\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|C:\\Users\\user\\gitBss\\hubBss\\easybbs\\views\\board\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\views\\board\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|C:\\Users\\user\\gitBss\\hubBss\\easybbs\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDb__MSSQLLocalDB/YourAppNameDb/True/SqlTable/dbo.BoardEntities.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\app_start\\bundleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\app_start\\bundleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|c:\\users\\user\\gitbss\\hubbss\\easybbs\\migrations\\202506121318597_addposteddatetoboardpostentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{456CAE45-B328-48F2-B4B2-9EDCE35333B1}|EasyBBS\\EasyBBS.csproj|solutionrelative:easybbs\\migrations\\202506121318597_addposteddatetoboardpostentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -53,144 +94,280 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Base\\Index.cshtml",
-              "RelativeDocumentMoniker": "EasyBBS\\Views\\Base\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Base\\Index.cshtml",
-              "RelativeToolTip": "EasyBBS\\Views\\Base\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-04T10:19:03.899Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BoardPostModel.cs",
-              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Models\\BoardPostModel.cs",
-              "RelativeDocumentMoniker": "EasyBBS\\Models\\BoardPostModel.cs",
-              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Models\\BoardPostModel.cs",
-              "RelativeToolTip": "EasyBBS\\Models\\BoardPostModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T10:13:32.815Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "BoardController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Controllers\\BoardController.cs",
-              "RelativeDocumentMoniker": "EasyBBS\\Controllers\\BoardController.cs",
-              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Controllers\\BoardController.cs",
-              "RelativeToolTip": "EasyBBS\\Controllers\\BoardController.cs",
-              "ViewState": "AgIAACMBAAAAAAAAAADwvyMBAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T10:13:27.893Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BoardListModel.cs",
-              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Models\\BoardListModel.cs",
-              "RelativeDocumentMoniker": "EasyBBS\\Models\\BoardListModel.cs",
-              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Models\\BoardListModel.cs",
-              "RelativeToolTip": "EasyBBS\\Models\\BoardListModel.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T10:13:21.5Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BoardDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Models\\BoardDbContext.cs",
-              "RelativeDocumentMoniker": "EasyBBS\\Models\\BoardDbContext.cs",
-              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Models\\BoardDbContext.cs",
-              "RelativeToolTip": "EasyBBS\\Models\\BoardDbContext.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T10:13:10.937Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BoardCreateModel.cs",
-              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Models\\BoardCreateModel.cs",
-              "RelativeDocumentMoniker": "EasyBBS\\Models\\BoardCreateModel.cs",
-              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Models\\BoardCreateModel.cs",
-              "RelativeToolTip": "EasyBBS\\Models\\BoardCreateModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T10:12:29.264Z",
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "EasyBBS\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "EasyBBS\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T13:52:41.799Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BaseController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Controllers\\BaseController.cs",
-              "RelativeDocumentMoniker": "EasyBBS\\Controllers\\BaseController.cs",
-              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Controllers\\BaseController.cs",
-              "RelativeToolTip": "EasyBBS\\Controllers\\BaseController.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAQwD4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T10:02:26.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RouteConfig.cs",
-              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\App_Start\\RouteConfig.cs",
-              "RelativeDocumentMoniker": "EasyBBS\\App_Start\\RouteConfig.cs",
-              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\App_Start\\RouteConfig.cs",
-              "RelativeToolTip": "EasyBBS\\App_Start\\RouteConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T09:58:36.386Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "dbo.BoardEntities.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDb__MSSQLLocalDB/YourAppNameDb/True/SqlTable/dbo.BoardEntities.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDb__MSSQLLocalDB/YourAppNameDb/True/SqlTable/dbo.BoardEntities.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-06-04T09:56:53.346Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Show.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Board\\Show.cshtml",
-              "RelativeDocumentMoniker": "EasyBBS\\Views\\Board\\Show.cshtml",
-              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Board\\Show.cshtml",
-              "RelativeToolTip": "EasyBBS\\Views\\Board\\Show.cshtml",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBgAAAAsAAAAAAAAAA==",
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "EasyBBS\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "EasyBBS\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-04T09:55:22.832Z"
+              "WhenOpened": "2025-06-12T13:52:37.344Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Base\\Index.cshtml",
+              "RelativeDocumentMoniker": "EasyBBS\\Views\\Base\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Base\\Index.cshtml",
+              "RelativeToolTip": "EasyBBS\\Views\\Base\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T13:52:31.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Board\\Create.cshtml",
+              "RelativeDocumentMoniker": "EasyBBS\\Views\\Board\\Create.cshtml",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Board\\Create.cshtml",
+              "RelativeToolTip": "EasyBBS\\Views\\Board\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T13:52:29.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Board\\Delete.cshtml",
               "RelativeDocumentMoniker": "EasyBBS\\Views\\Board\\Delete.cshtml",
               "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Board\\Delete.cshtml",
               "RelativeToolTip": "EasyBBS\\Views\\Board\\Delete.cshtml",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-04T09:54:43.039Z"
+              "WhenOpened": "2025-06-12T13:52:26.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Board\\Edit.cshtml",
+              "RelativeDocumentMoniker": "EasyBBS\\Views\\Board\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Board\\Edit.cshtml",
+              "RelativeToolTip": "EasyBBS\\Views\\Board\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T13:50:36.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Show.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Board\\Show.cshtml",
+              "RelativeDocumentMoniker": "EasyBBS\\Views\\Board\\Show.cshtml",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Board\\Show.cshtml",
+              "RelativeToolTip": "EasyBBS\\Views\\Board\\Show.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAABnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T13:50:13.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Board\\Index.cshtml",
+              "RelativeDocumentMoniker": "EasyBBS\\Views\\Board\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Views\\Board\\Index.cshtml",
+              "RelativeToolTip": "EasyBBS\\Views\\Board\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T13:50:09.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BoardControllerTest.cs",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS.Tests\\Controllers\\BoardControllerTest.cs",
+              "RelativeDocumentMoniker": "EasyBBS.Tests\\Controllers\\BoardControllerTest.cs",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS.Tests\\Controllers\\BoardControllerTest.cs",
+              "RelativeToolTip": "EasyBBS.Tests\\Controllers\\BoardControllerTest.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:50:01.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IdentityModels.cs",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Models\\IdentityModels.cs",
+              "RelativeDocumentMoniker": "EasyBBS\\Models\\IdentityModels.cs",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Models\\IdentityModels.cs",
+              "RelativeToolTip": "EasyBBS\\Models\\IdentityModels.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAGoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:49:40.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BoardPostModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Models\\BoardPostModel.cs",
+              "RelativeDocumentMoniker": "EasyBBS\\Models\\BoardPostModel.cs",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Models\\BoardPostModel.cs",
+              "RelativeToolTip": "EasyBBS\\Models\\BoardPostModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:49:41.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BoardCreateModel.cs",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Models\\BoardCreateModel.cs",
+              "RelativeDocumentMoniker": "EasyBBS\\Models\\BoardCreateModel.cs",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Models\\BoardCreateModel.cs",
+              "RelativeToolTip": "EasyBBS\\Models\\BoardCreateModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:48:29.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Controllers\\BaseController.cs",
+              "RelativeDocumentMoniker": "EasyBBS\\Controllers\\BaseController.cs",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Controllers\\BaseController.cs",
+              "RelativeToolTip": "EasyBBS\\Controllers\\BaseController.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:48:00.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "EasyBBS\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "EasyBBS\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:40:40.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "WebApiConfig.cs",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\App_Start\\WebApiConfig.cs",
+              "RelativeDocumentMoniker": "EasyBBS\\App_Start\\WebApiConfig.cs",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\App_Start\\WebApiConfig.cs",
+              "RelativeToolTip": "EasyBBS\\App_Start\\WebApiConfig.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:40:38.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Startup.Auth.cs",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\App_Start\\Startup.Auth.cs",
+              "RelativeDocumentMoniker": "EasyBBS\\App_Start\\Startup.Auth.cs",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\App_Start\\Startup.Auth.cs",
+              "RelativeToolTip": "EasyBBS\\App_Start\\Startup.Auth.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:40:35.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "EasyBBS\\App_Start\\RouteConfig.cs",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "EasyBBS\\App_Start\\RouteConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:40:34.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "BundleConfig.cs",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\App_Start\\BundleConfig.cs",
+              "RelativeDocumentMoniker": "EasyBBS\\App_Start\\BundleConfig.cs",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\App_Start\\BundleConfig.cs",
+              "RelativeToolTip": "EasyBBS\\App_Start\\BundleConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:40:13.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BoardController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Controllers\\BoardController.cs",
+              "RelativeDocumentMoniker": "EasyBBS\\Controllers\\BoardController.cs",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Controllers\\BoardController.cs",
+              "RelativeToolTip": "EasyBBS\\Controllers\\BoardController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAkwK0AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:20:32.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AccountViewModels.cs",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Models\\AccountViewModels.cs",
+              "RelativeDocumentMoniker": "EasyBBS\\Models\\AccountViewModels.cs",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Models\\AccountViewModels.cs",
+              "RelativeToolTip": "EasyBBS\\Models\\AccountViewModels.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAuwB4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T11:59:35.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "202506121318597_AddPostedDateToBoardPostEntity.cs",
+              "DocumentMoniker": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Migrations\\202506121318597_AddPostedDateToBoardPostEntity.cs",
+              "RelativeDocumentMoniker": "EasyBBS\\Migrations\\202506121318597_AddPostedDateToBoardPostEntity.cs",
+              "ToolTip": "C:\\Users\\user\\gitBss\\hubBss\\EasyBBS\\Migrations\\202506121318597_AddPostedDateToBoardPostEntity.cs",
+              "RelativeToolTip": "EasyBBS\\Migrations\\202506121318597_AddPostedDateToBoardPostEntity.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAswA4AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:19:09.347Z",
+              "EditorCaption": ""
             }
           ]
         }

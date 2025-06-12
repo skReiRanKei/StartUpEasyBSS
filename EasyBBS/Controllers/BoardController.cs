@@ -5,6 +5,9 @@ using System.Web.Mvc;
 using EasyBBS.Models;
 using System.Data.Entity;
 using System;
+using static EasyBBS.Models.ApplicationDbContext;
+using System.Threading.Tasks;
+using Microsoft.AspNet.Identity;
 
 
 namespace EasyBBS.Controllers
@@ -13,13 +16,14 @@ namespace EasyBBS.Controllers
     /// 掲示板の参照・変更回りのコントローラ
     /// /Board
     /// </summary>
+    [Authorize] 
     public class BoardController : Controller
     {
         #region "変数"
         /// <summary>
         /// DbContextのインスタンス
         /// </summary>
-        private BoardDbContext _db;
+        private ApplicationDbContext _db;
         #endregion
 
 
@@ -34,9 +38,9 @@ namespace EasyBBS.Controllers
         /// DBを指定して生成
         /// </summary>
         /// <param name="db"></param>
-        public BoardController(BoardDbContext db)
+        public BoardController(ApplicationDbContext db)
         {
-            _db = db ?? new BoardDbContext();
+            _db = db ?? new ApplicationDbContext();
         }
         #endregion
 
@@ -107,7 +111,9 @@ namespace EasyBBS.Controllers
         /// <param name="data">投稿内容</param>
         /// <returns></returns>
         [HttpPost]
-        public ActionResult Create(BoardCreateModel data)
+        [ValidateAntiForgeryToken]
+        [Authorize]
+        public async Task<ActionResult> Create(BoardCreateModel data)
         {
             if (!ModelState.IsValid) 
             {
@@ -115,15 +121,19 @@ namespace EasyBBS.Controllers
             }
             try
             {
-                var result = _db.Boards.Add(new BoardEntity
+
+                var newBoard = new BoardEntity
                 {
                     Title = data.Title,
                     Text = data.Text,
                     PostedDate = System.DateTime.Now,
-                });
+                    UserId = User.Identity.GetUserId() 
+                };
 
-                _db.SaveChanges();
-                return Redirect("/Board/Show/" + result.Id);
+                _db.Boards.Add(newBoard);
+                await _db.SaveChangesAsync(); 
+
+                return RedirectToAction("Show", new { id = newBoard.Id });
             }
             catch (Exception ex)
             {
@@ -147,7 +157,7 @@ namespace EasyBBS.Controllers
         {
             if (!ModelState.IsValid) 
             {
-                return View(data); 
+                return RedirectToAction("Show", new { id = id });
             }
             try
             {
@@ -156,18 +166,19 @@ namespace EasyBBS.Controllers
                 {
                     board.Posts.Add(new BoardPostEntity
                     {
-                        Text = data.Text
+                        Text = data.Text,
+                        PostedDate = DateTime.Now
                     });
                     _db.SaveChanges();
                 }
-                return Redirect("/Board/Show/" + id);
+                return RedirectToAction("Show", new { id = id });
             }        
             catch (Exception ex)
             {
                 // ログに記録
                 System.Diagnostics.Debug.WriteLine($"PostResponseアクションでエラー: {ex.Message}");
                 ViewBag.ErrorMessage = "掲示板の返信投稿でエラーが発生しました。再度お試しください。";
-                return View(data);
+                return RedirectToAction("Show", new { id = id });
             }
         }
 
@@ -218,7 +229,13 @@ namespace EasyBBS.Controllers
 
                 if (board == null)
                 {
-                    // 投稿が見つからない場合は、エラーとせず、単にリダイレクト
+                    TempData["InfoMessage"] = "指定された掲示板は既に存在しないか、削除済みです。";
+                    return RedirectToAction("Index");
+                }
+                // 権限チェック
+                if (board.UserId != User.Identity.GetUserId())
+                {
+                    TempData["ErrorMessage"] = "他のユーザーの投稿は削除できません。";
                     return RedirectToAction("Index");
                 }
 
@@ -270,6 +287,13 @@ namespace EasyBBS.Controllers
                     // 投稿が見つからない場合は、NotFound (404) を返す
                     return HttpNotFound();
                 }
+                // 投稿者チェック
+                if (board.UserId != User.Identity.GetUserId())
+                {
+                    // 権限がない場合、アクセス拒否またはエラーページへリダイレクト
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden); // 403 Forbidden
+                                                                               // または return RedirectToAction("Index", "Board", new { errorMessage = "他のユーザーの投稿は編集できません。" });
+                }
                 // 編集フォームに現在の投稿内容を渡す
                 return View(board);
             }
@@ -315,6 +339,7 @@ namespace EasyBBS.Controllers
                 return View(board);
             }
         }
+
         #endregion
 
 

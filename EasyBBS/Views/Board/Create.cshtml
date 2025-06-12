@@ -4,21 +4,39 @@
     ViewBag.Title = "掲示板の追加";
 }
 
-@using (Html.BeginForm("Create", "Board", FormMethod.Post))
-{
-    <p>
-        タイトル:
-        @Html.TextBoxFor(m => m.Title)
-    </p>
-    <p>本文:</p>
-    @Html.TextAreaFor(m => m.Text)
-    <div>
-        <input type="submit" value="作成" />
-    </div>
-}
-<hr /> @* アクションリンクとの区切り線 *@
-<div>
-    <p>
-        @Html.ActionLink("ホームに戻る", "Index", "Base")
-    </p>
-</div>
+<div class="main-page-content-wrapper">
+
+            <div class="container"> 
+                <h2 class="text-center my-4">@ViewBag.Title</h2> 
+
+                @using (Html.BeginForm("Create", "Board", FormMethod.Post, new { @class = "form" }))
+                {
+                    @Html.AntiForgeryToken() 
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" }) 
+
+                    <div class="form-group my-3"> 
+                        @Html.LabelFor(m => m.Title, new { @class = "form-label" }) 
+                        @Html.TextBoxFor(m => m.Title, new { @class = "form-control" }) 
+                        @Html.ValidationMessageFor(m => m.Title, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group my-3"> 
+                        @Html.LabelFor(m => m.Text, new { @class = "form-label" }) 
+                        @Html.TextAreaFor(m => m.Text, new { @class = "form-control", rows = 10 }) 
+                        @Html.ValidationMessageFor(m => m.Text, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="d-grid gap-2 my-4"> 
+                        <button type="submit" class="btn btn-success btn-lg">作成</button> 
+                    </div>
+                }
+                <hr class="my-4" />
+                <div class="text-center">
+                    @Html.ActionLink("ホームに戻る", "Index", "Base", null, new { @class = "btn btn-secondary" }) 
+                </div>
+            </div>
+        </div>
+
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }

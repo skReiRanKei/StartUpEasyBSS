@@ -1,0 +1,87 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-color: #17a2b8;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    font-size: 14px; 
+    line-height: 1.5; 
+
+}
+
+#login .container #login-row #login-column #login-box {
+    margin-top: 120px;
+    max-width: 600px;
+    min-height: 450px;
+    /* hheight: 320px; */
+    border: 1px solid #9C9C9C;
+    background-color: #EAEAEA;
+    margin-top: 50px; /* ナビゲーションバーからの上部の余白 */
+    margin-bottom: 50px; /* フッターまでの下部の余白 */
+}
+
+#login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+}
+
+#login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+}
+
+#login-form .form-group:last-of-type {
+    margin-top: 20px; 
+}
+
+#login-form .btn-info {
+    margin-top: 10px;
+}
+
+.main-page-content-wrapper {
+    background-color: #EAEAEA; /* 白または薄い灰色 */
+    padding: 20px; /* 内側の余白 */
+    margin-top: 50px; /* ナビゲーションバーからの上部の余白 */
+    margin-bottom: 50px; /* フッターまでの下部の余白 */
+    margin-left: auto; 
+    margin-right: auto; 
+    max-width: 960px; 
+    min-height: calc(100vh - 200px); 
+    border-radius: 5px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+
+#login .container #login-row #login-column #login-box {
+
+    margin-top: 0; 
+}
+
+/* 見出しの文字サイズを調整 */
+h1, h2, h3, h4, h5, h6 {
+    font-size: 24px; 
+    /* font-weight: normal; */ /* 太字が強すぎる場合に解除 */
+}
+
+/* フォーム内のラベル */
+.form-group label {
+    font-size: 14px; /* ラベルのフォントサイズ */
+}
+
+/* 入力フィールド */
+.form-control {
+    font-size: 16px; /* 入力フィールドのフォントサイズ */
+}
+
+/* ボタン */
+.btn {
+    font-size: 16px; /* ボタンのフォントサイズ */
+}
+
+/* ログイン画面のタイトル */
+#login .login-main-text h2 {
+    font-size: 36px; /* ログイン画面の「アプリケーションログインページ」のサイズ */
+}
+
+/* ログイン・登録フォームのタイトル */
+#login-form h3, #register-form h3 {
+    font-size: 24px; /* ログイン/登録フォーム内の「ログイン」/「新規登録」タイトルのサイズ */
+}

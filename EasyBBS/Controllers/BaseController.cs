@@ -5,6 +5,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using EasyBBS.Models;
+using static EasyBBS.Models.ApplicationDbContext;
+
 
 namespace EasyBBS.Controllers
 {
@@ -20,7 +22,7 @@ namespace EasyBBS.Controllers
 
         #region "変数"
         // DbContextのインスタンス
-        private BoardDbContext _db;
+        private ApplicationDbContext _db;
         #endregion
 
         #region "コンストラクタ"
@@ -30,7 +32,7 @@ namespace EasyBBS.Controllers
         public BaseController() 
         {
             // 初期化
-            _db = new BoardDbContext(); 
+            _db = new ApplicationDbContext(); 
         }
         #endregion
 

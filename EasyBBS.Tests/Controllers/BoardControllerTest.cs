@@ -6,6 +6,7 @@ using System.Linq;
 using System.Collections.Generic;
 using EasyBBS.Controllers;
 using EasyBBS.Models;
+using static EasyBBS.Models.ApplicationDbContext;
 
 namespace EasyBBS.Tests.Controllers
 {
@@ -23,7 +24,7 @@ namespace EasyBBS.Tests.Controllers
         {
             // DBのモックを用意する
             var mockset = new Mock<DbSet<BoardEntity>>();
-            var mockcontext = new Mock<BoardDbContext>();
+            var mockcontext = new Mock<ApplicationDbContext>();
 
             var originalData = new List<BoardEntity> {
                 new BoardEntity { Id = 1, Title = "A", Text = "a" },
@@ -60,7 +61,7 @@ namespace EasyBBS.Tests.Controllers
         {
             // DBのモックを用意する
             var mockset = new Mock<DbSet<BoardEntity>>();
-            var mockcontext = new Mock<BoardDbContext>();
+            var mockcontext = new Mock<ApplicationDbContext>();
 
             // 掲示板の情報
             var postOriginalData = new List<BoardPostEntity> {
@@ -114,7 +115,7 @@ namespace EasyBBS.Tests.Controllers
         {
             // モック用意
             var mockset = new Mock<DbSet<BoardEntity>>();
-            var mockcontext = new Mock<BoardDbContext>();
+            var mockcontext = new Mock<ApplicationDbContext>();
 
             // ダミーデータの生成
             var model = new BoardCreateModel
@@ -130,7 +131,7 @@ namespace EasyBBS.Tests.Controllers
             mockcontext.Setup(m => m.Boards).Returns(mockset.Object);
 
             var controller = new BoardController(mockcontext.Object);
-            var result = controller.Create(model) as RedirectResult;
+            var result = controller.Create(model);
             Assert.IsNotNull(result);
 
             // Addが呼ばれたかチェック
@@ -139,7 +140,7 @@ namespace EasyBBS.Tests.Controllers
             // SaveChangesがよばれたかチェック
             mockcontext.Verify(m => m.SaveChanges(), Times.Once);
 
-            Assert.AreEqual(result.Url, "/Board/Show/1");
+            Assert.AreEqual(result.Result, "/Board/Show/1");
         }
 
         /// <summary>
@@ -151,7 +152,7 @@ namespace EasyBBS.Tests.Controllers
             // DBのモックを用意する
             var mockposts = new Mock<ICollection<BoardPostEntity>>();
             var mockset = new Mock<DbSet<BoardEntity>>();
-            var mockcontext = new Mock<BoardDbContext>();
+            var mockcontext = new Mock<ApplicationDbContext>();
 
             var originalData = new List<BoardEntity> {
                 new BoardEntity { Id = 1, Title = "A", Text = "a", Posts = mockposts.Object },

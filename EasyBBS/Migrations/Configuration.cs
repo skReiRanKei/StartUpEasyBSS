@@ -5,15 +5,15 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<EasyBBS.Models.BoardDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<EasyBBS.Models.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "EasyBBS.Models.BoardDbContext";
+            ContextKey = "EasyBBS.Models.ApplicationDbContext";
         }
 
-        protected override void Seed(EasyBBS.Models.BoardDbContext context)
+        protected override void Seed(EasyBBS.Models.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

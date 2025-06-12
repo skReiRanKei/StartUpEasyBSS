@@ -4,17 +4,38 @@
     ViewBag.Title = "掲示板の一覧";
 }
 
-@foreach (var board in Model.Boards)
-{
-    <div>
-        <p>
-            @Html.ActionLink(@board.Title, "Show", new { id = board.Id })
-        </p>
+<div class="main-page-content-wrapper">
+    <div class="container">
+        <h2 class="text-center my-4">@ViewBag.Title</h2>
+        @if (Model.Boards != null && Model.Boards.Any())
+        {
+            <div class="list-group my-4">
+                @foreach (var board in Model.Boards)
+                {
+                    <a href="@Url.Action("Show", new { id = board.Id })" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1 text-primary">@board.Title</h5> 
+                            <small class="text-muted">投稿日時: @board.PostedDate.ToString("yyyy/MM/dd HH:mm")</small> @* 投稿日時を追加 *@
+                        </div>
+                        <p class="mb-1 text-secondary text-truncate">@Html.Raw(board.Text.Replace("\n", " "))</p>
+                        <small class="text-info">詳細を見る</small>
+                    </a>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-info text-center my-4" role="alert">
+                まだ掲示板がありません。
+            </div>
+        }
+        <hr class="my-4" />
+        <div class="text-center mb-4">
+            @* リンクを中央に配置 *@
+            @Html.ActionLink("新しい掲示板を立てる", "Create", null, new { @class = "btn btn-success btn-lg me-3" }) 
+            @Html.ActionLink("ホームに戻る", "Index", "Base", null, new { @class = "btn btn-outline-dark btn-lg" }) 
+        </div>
+
     </div>
-
-}
-<hr />
-
-<div>
-    @Html.ActionLink("ホームに戻る", "Index", "Base")
 </div>
+
