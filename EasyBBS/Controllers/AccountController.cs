@@ -11,7 +11,7 @@ namespace EasyBBS.Controllers
     /// <summary>
     /// アカウントコントロール
     /// </summary>
-    [Authorize] // デフォルトで認証が必要であることを示す（個々のアクションで[AllowAnonymous]で上書き可能）
+    [Authorize] // デフォルトで認証が必要
     public class AccountController : Controller
     {
 
@@ -220,7 +220,7 @@ namespace EasyBBS.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Board"); // デフォルトのログイン後リダイレクト先
+            return RedirectToAction("Index", "Base"); // デフォルトのログイン後リダイレクト先
         }
         #endregion
 

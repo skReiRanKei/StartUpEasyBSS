@@ -270,6 +270,7 @@ namespace EasyBBS.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -311,7 +312,8 @@ namespace EasyBBS.Controllers
         // POST: Board/Edit/5
         // 編集フォームから送られてきたデータを受け取り、データベースを更新する
         [HttpPost]
-        [ValidateAntiForgeryToken] 
+        [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit(BoardEntity board) 
         {
             try

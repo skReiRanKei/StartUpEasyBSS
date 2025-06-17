@@ -266,7 +266,9 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BoardCreateModel.cs" />
+    <Compile Include="Models\BoardEntity.cs" />
     <Compile Include="Models\BoardListModel.cs" />
+    <Compile Include="Models\BoardPostEntity.cs" />
     <Compile Include="Models\BoardPostModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

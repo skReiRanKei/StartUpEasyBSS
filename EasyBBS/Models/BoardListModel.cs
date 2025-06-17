@@ -15,7 +15,7 @@ namespace EasyBBS.Models
         public List<BoardEntity> Boards { get; private set; }
 
         /// <summary>
-        /// 
+        /// コンストラクタ
         /// </summary>
         /// <param name="db"></param>
         public BoardListModel(ApplicationDbContext db)

@@ -1,5 +1,5 @@
 ﻿
-@model EasyBBS.Models.ApplicationDbContext.BoardEntity
+@model EasyBBS.Models.BoardEntity
 @{
     Layout = "~/Views/Shared/_BaseLayout.cshtml";
     ViewBag.Title = "掲示板を編集";
@@ -45,9 +45,9 @@
         }
         <hr class="my-4" />
         <div class="text-center mb-4">
-            @Html.ActionLink("一覧に戻る", "Index", null, new { @class = "btn btn-secondary me-2" }) 
-            @Html.ActionLink("詳細に戻る", "Show", new { id = Model.Id }, new { @class = "btn btn-outline-info me-2" }) 
-            @Html.ActionLink("ホームに戻る", "Index", "Base", null, new { @class = "btn btn-outline-dark" }) 
+            @Html.ActionLink("一覧に戻る", "Index", null, new { @class = "btn btn-secondary me-2" })
+            @Html.ActionLink("詳細に戻る", "Show", new { id = Model.Id }, new { @class = "btn btn-outline-info me-2" })
+            @Html.ActionLink("ホームに戻る", "Index", "Base", null, new { @class = "btn btn-outline-dark" })
         </div>
     </div>
 </div>

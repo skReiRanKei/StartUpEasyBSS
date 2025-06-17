@@ -1,8 +1,16 @@
-﻿@model EasyBBS.Models.ApplicationDbContext.BoardEntity
+﻿@model EasyBBS.Models.BoardEntity
 @{
     Layout = "~/Views/Shared/_BaseLayout.cshtml";
     ViewBag.Title = "掲示板の削除";
 }
+
+<style>
+    .card-header.custom-ribbon-color
+    {
+        background-color: #A7D9ED;
+        color: #777;
+    }
+</style>
 
 <div class="main-page-content-wrapper">
 
@@ -12,8 +20,8 @@
         <h3 class="text-center text-danger my-4">本当にこの掲示板投稿を削除しますか？</h3>
 
         <div class="card my-4">
-            <div class="card-header bg-warning text-dark">
-                <h4>掲示板投稿詳細</h4>
+            <div class="card-header custom-ribbon-color">
+                 <h5 class="mb-0">掲示板投稿詳細</h5>
             </div>
             <div class="card-body">
                 <dl class="row">
@@ -35,13 +43,8 @@
 
             <div class="d-flex justify-content-center gap-3 my-4">
                 <button type="submit" class="btn btn-danger btn-lg">削除</button>
-                @Html.ActionLink("一覧に戻る", "Index", null, new { @class = "btn btn-secondary btn-lg" })
+                @Html.ActionLink("一覧に戻る", "Index", null, new { @class = "btn btn-outline-dark" })
             </div>
         }
-
-        <hr class="my-4" />
-        <div class="text-center mb-4">
-            @Html.ActionLink("ホームに戻る", "Index", "Base", null, new { @class = "btn btn-outline-info" })
-        </div>
     </div>
 </div>

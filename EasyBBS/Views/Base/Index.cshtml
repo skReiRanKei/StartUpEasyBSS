@@ -4,7 +4,7 @@
 }
 
 <style>
-   
+
     .board-summary {
         border: 1px solid #ddd;
         padding: 15px;
@@ -13,34 +13,44 @@
         background-color: #f9f9f9;
     }
 
-        .board-summary h4 {
-            margin-top: 0;
-            color: #337ab7;
-        }
+    .board-summary h4 {
+        margin-top: 0;
+        color: #337ab7;
+    }
 
-        .board-summary p {
-            font-size: 0.9em;
-            color: #555;
-        }
+    .board-summary p {
+        font-size: 0.9em;
+        color: #555;
+    }
+
+    .count-section h5 {
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #666;
+        margin-bottom: 5px;
+    }
+
+    .count-section p {
+        font-size: 1.0em;
+        margin-top: 5px;
+    }
 </style>
 
-
 <hr />
-
-<div>
-    <h3>掲示板の件数</h3>
+<div class="count-section">
+    <h5>掲示板の件数</h5>
     <p>現在、<span style="font-weight: bold; color: blue;">@ViewBag.BoardCount</span> 件の掲示板があります。</p>
 </div>
 
 <hr />
 
-<h3>最新の掲示板投稿</h3>
+<h2>最新の掲示板投稿</h2>
 @if (ViewBag.LatestBoards != null && ViewBag.LatestBoards.Count > 0)
 {
     foreach (var board in ViewBag.LatestBoards)
     {
         <div class="board-summary">
-           
+
             <p>
                 @if (!string.IsNullOrEmpty(board.Text) && board.Text.Length > 100)
                 {
@@ -65,8 +75,8 @@ else
 <hr />
 
 <div>
-    @Html.ActionLink("掲示板一覧へ", "Index", "Board", null, new { @class = "btn btn-link" }) 
+    @Html.ActionLink("掲示板一覧へ", "Index", "Board", null, new { @class = "btn btn-link" })
 </div>
 <div>
-    @Html.ActionLink("新しい掲示板を立てる", "Create", "Board", null, new { @class = "btn btn-link" }) 
+    @Html.ActionLink("新しい掲示板を立てる", "Create", "Board", null, new { @class = "btn btn-link" })
 </div>
