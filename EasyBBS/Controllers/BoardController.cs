@@ -127,7 +127,7 @@ namespace EasyBBS.Controllers
                     Title = data.Title,
                     Text = data.Text,
                     PostedDate = System.DateTime.Now,
-                    UserId = User.Identity.GetUserId() 
+                    UserId = User.Identity.GetUserId()
                 };
 
                 _db.Boards.Add(newBoard);
@@ -185,6 +185,7 @@ namespace EasyBBS.Controllers
         // GET: Board/Delete/5
         // 削除確認画面を表示するアクション
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -201,6 +202,10 @@ namespace EasyBBS.Controllers
                 {
                     // 投稿が見つからない場合は、NotFound (404) を返す
                     return HttpNotFound();
+                }
+                if (!User.IsInRole("Admin") && User.Identity.GetUserId() != board.UserId)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden); // 403 Forbidden
                 }
                 // 削除確認画面に投稿の詳細を渡す
                 return View(board);
@@ -219,6 +224,7 @@ namespace EasyBBS.Controllers
         // 実際にデータベースから削除を実行
         [HttpPost, ActionName("Delete")] 
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             try
@@ -243,6 +249,10 @@ namespace EasyBBS.Controllers
                 {
                     _db.BoardPostEntities.RemoveRange(board.Posts);
 
+                }
+                if (!User.IsInRole("Admin") && User.Identity.GetUserId() != board.UserId)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden); // 403 Forbidden
                 }
 
                 // 投稿を削除
@@ -270,7 +280,7 @@ namespace EasyBBS.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -289,7 +299,7 @@ namespace EasyBBS.Controllers
                     return HttpNotFound();
                 }
                 // 投稿者チェック
-                if (board.UserId != User.Identity.GetUserId())
+                if (!User.IsInRole("Admin") && User.Identity.GetUserId() != board.UserId)
                 {
                     // 権限がない場合、アクセス拒否またはエラーページへリダイレクト
                     return new HttpStatusCodeResult(HttpStatusCode.Forbidden); // 403 Forbidden
@@ -314,10 +324,20 @@ namespace EasyBBS.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public ActionResult Edit(BoardEntity board) 
+        [Authorize(Roles = "Admin")]
+        public ActionResult Edit([Bind(Include = "Id,Title,Text,PostedDate,ImageUrl,UserId")] BoardEntity board)
         {
             try
             {
+                BoardEntity originalBoard = _db.Boards.AsNoTracking().FirstOrDefault(b => b.Id == board.Id);
+                if (originalBoard == null)
+                {
+                    return HttpNotFound();
+                }
+                if (!User.IsInRole("Admin") && User.Identity.GetUserId() != originalBoard.UserId)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.Forbidden); // 403 Forbidden
+                }
                 if (ModelState.IsValid)
                 {
                     // データベースが更新対象として認識するように指示

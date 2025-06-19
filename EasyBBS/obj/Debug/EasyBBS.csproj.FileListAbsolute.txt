@@ -136,6 +136,7 @@ C:\Users\user\gitBss\hubBss\EasyBBS\obj\Debug\EasyBBS.Migrations.InitialCreate.r
 C:\Users\user\gitBss\hubBss\EasyBBS\obj\Debug\EasyBBS.Migrations.AddPostedDateToBoard.resources
 C:\Users\user\gitBss\hubBss\EasyBBS\obj\Debug\EasyBBS.Migrations.AddUserIdToBoard.resources
 C:\Users\user\gitBss\hubBss\EasyBBS\obj\Debug\EasyBBS.Migrations.AddPostedDateToBoardPostEntity.resources
+C:\Users\user\gitBss\hubBss\EasyBBS\obj\Debug\EasyBBS.Migrations.AddRoles.resources
 C:\Users\user\gitBss\hubBss\EasyBBS\obj\Debug\EasyBBS.csproj.GenerateResource.cache
 C:\Users\user\gitBss\hubBss\EasyBBS\obj\Debug\EasyBBS.csproj.CoreCompileInputs.cache
 C:\Users\user\gitBss\hubBss\EasyBBS\obj\Debug\EasyBBS.csproj.Up2Date

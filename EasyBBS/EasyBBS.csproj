@@ -263,6 +263,10 @@
     <Compile Include="Migrations\202506121318597_AddPostedDateToBoardPostEntity.Designer.cs">
       <DependentUpon>202506121318597_AddPostedDateToBoardPostEntity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202506191134585_AddRoles.cs" />
+    <Compile Include="Migrations\202506191134585_AddRoles.Designer.cs">
+      <DependentUpon>202506191134585_AddRoles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BoardCreateModel.cs" />
@@ -331,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202506121318597_AddPostedDateToBoardPostEntity.resx">
       <DependentUpon>202506121318597_AddPostedDateToBoardPostEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506191134585_AddRoles.resx">
+      <DependentUpon>202506191134585_AddRoles.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

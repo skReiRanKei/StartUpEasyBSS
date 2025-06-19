@@ -8,9 +8,9 @@ using Owin;
 using EasyBBS.Models;
 using Microsoft.Owin.Security;
 using System.Security.Claims;
-using System.Threading.Tasks; // ApplicationDbContext と ApplicationUser のために追加
+using System.Threading.Tasks;
 
-[assembly: OwinStartup(typeof(EasyBBS.Startup))] // Global.asax の HttpApplication ではなく、OWIN のエントリポイントを指定
+[assembly: OwinStartup(typeof(EasyBBS.Startup))]
 namespace EasyBBS
 {
     public partial class Startup
@@ -20,59 +20,44 @@ namespace EasyBBS
             ConfigureAuth(app);
         }
 
-        // Owin 認証の設定
+
+        /// <summary>
+        /// Owin 認証の設定
+        /// </summary>
+        /// <param name="app"></param>
         public void ConfigureAuth(IAppBuilder app)
         {
-            // DB コンテキストとユーザー マネージャーを 1 要求につき 1 インスタンス使用するよう構成します。
+            // DB コンテキストとユーザー マネージャーを 1 要求につき 1 インスタンス使用
             app.CreatePerOwinContext(ApplicationDbContext.Create);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
             app.CreatePerOwinContext<ApplicationSignInManager>(ApplicationSignInManager.Create);
 
-            // アプリケーションが Cookie を使用してサインインしているユーザーの情報を格納できるようにします。
-            // また、サードパーティのログイン プロバイダーを使用してログインしているユーザーの情報を一時的に保存できるものとします。
-            // サインイン Cookie の設定
+            // アプリケーションが Cookie を使用してサインインしているユーザーの情報を格納
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
                 LoginPath = new PathString("/Account/Login"), // ログインページのパス
                 Provider = new CookieAuthenticationProvider
                 {
-                    // ユーザーがログインするときにセキュリティ スタンプを検証するロジックをアプリケーションにフックするようにします。
-                    // これは、パスワードを変更したり、ソーシャル ログインをアカウントに追加したりするときのセキュリティ機能です。
                     OnValidateIdentity = SecurityStampValidator.OnValidateIdentity<ApplicationUserManager, ApplicationUser>(
                         validateInterval: TimeSpan.FromMinutes(30), // 30分ごとに検証
                         regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
                 }
             });
+            app.CreatePerOwinContext<ApplicationRoleManager>(ApplicationRoleManager.Create);
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
-            // アカウントのリンク中に 2 要素認証プロセスを保存するために、2 要素認証 Cookie を有効にします。
             app.UseTwoFactorSignInCookie(DefaultAuthenticationTypes.TwoFactorCookie, TimeSpan.FromMinutes(5));
-
-            // アプリケーションが、電話またはメールの 2 要素認証コードを記憶できるようにします。
-            // これは、ログイン プロセスで 2 番目の検証手順として、デバイスで入力したコードを記憶するために使用されます。
             app.UseTwoFactorRememberBrowserCookie(DefaultAuthenticationTypes.TwoFactorRememberBrowserCookie);
 
-            // ここで外部ログイン プロバイダー (Google、Facebook、Twitter など) をコメント解除できます。
-            //app.UseMicrosoftAccountAuthentication(
-            //    clientId: "",
-            //    clientSecret: "");
 
-            //app.UseTwitterAuthentication(
-            //   consumerKey: "",
-            //   consumerSecret: "");
-
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
-
-            //app.UseGoogleAuthentication(
-            //    clientId: "",
-            //    clientSecret: "");
         }
     }
 
-    // ApplicationUserManager は IdentityUser を管理するためのクラスです。
+
+    /// <summary>
+    /// IdentityUser を管理
+    /// </summary>
     public class ApplicationUserManager : UserManager<ApplicationUser>
     {
         public ApplicationUserManager(IUserStore<ApplicationUser> store)
@@ -84,14 +69,14 @@ namespace EasyBBS
         {
             var manager = new ApplicationUserManager(new UserStore<ApplicationUser>(context.Get<ApplicationDbContext>()));
 
-            // ユーザー名の検証ロジックを構成します。
+            // ユーザー名の検証ロジックを構成
             manager.UserValidator = new UserValidator<ApplicationUser>(manager)
             {
                 AllowOnlyAlphanumericUserNames = false, // 英数字のみを許可するか
                 RequireUniqueEmail = true // メールアドレスの一意性を要求するか
             };
 
-            // パスワードの検証ロジックを構成します。
+            // パスワードの検証ロジックを構成
             manager.PasswordValidator = new PasswordValidator
             {
                 RequiredLength = 6, // 最小文字数
@@ -101,13 +86,13 @@ namespace EasyBBS
                 RequireUppercase = true, // 大文字を要求するか
             };
 
-            // ユーザー ロックアウトの既定値を構成します。
+            // ユーザー ロックアウトの既定値を構成
             manager.UserLockoutEnabledByDefault = true;
             manager.DefaultAccountLockoutTimeSpan = TimeSpan.FromMinutes(5); // ロックアウト時間
             manager.MaxFailedAccessAttemptsBeforeLockout = 5; // ロックアウトするまでの失敗回数
 
-            // 2 要素認証プロバイダーを登録します。
-            // 電話とメールのプロバイダーを登録します。
+            // 2 要素認証プロバイダーを登録
+            // 電話とメールのプロバイダーを登録
             manager.RegisterTwoFactorProvider("Phone Code", new PhoneNumberTokenProvider<ApplicationUser>
             {
                 MessageFormat = "Your security code is {0}"
@@ -129,7 +114,7 @@ namespace EasyBBS
         }
     }
 
-    // ApplicationSignInManager は OWIN コンテキストで使用するサインイン マネージャーを構成します。
+    // ApplicationSignInManager は OWIN コンテキストで使用するサインイン マネージャーを構成
     public class ApplicationSignInManager : SignInManager<ApplicationUser, string>
     {
         public ApplicationSignInManager(ApplicationUserManager userManager, IAuthenticationManager authenticationManager)
@@ -148,13 +133,13 @@ namespace EasyBBS
         }
     }
 
-    // ここにメールやSMS送信サービスの実装があれば追加します。
+    // ここにメールやSMS送信サービスの実装があれば追加
     // デフォルトでは何も送信されません。
     public class EmailService : IIdentityMessageService
     {
         public Task SendAsync(IdentityMessage message)
         {
-            // プラグインする電子メール サービスをここに設定します。
+            // プラグインする電子メール サービスをここに設定
             return Task.FromResult(0);
         }
     }
@@ -163,7 +148,7 @@ namespace EasyBBS
     {
         public Task SendAsync(IdentityMessage message)
         {
-            // プラグインする SMS サービスをここに設定します。
+            // プラグインする SMS サービスをここに設定
             return Task.FromResult(0);
         }
     }

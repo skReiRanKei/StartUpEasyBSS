@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 // アセンブリに関する一般情報は、以下の属性セットによって 
 // 制御されます。アセンブリに関連付けられている情報を変更するには、
-// これらの属性値を変更します。
+// これらの属性値を変更
 [assembly: AssemblyTitle("EasyBBS.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]

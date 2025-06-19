@@ -1,29 +1,30 @@
-﻿@model EasyBBS.Models.BoardEntity
+﻿@using Microsoft.AspNet.Identity
+@model EasyBBS.Models.BoardEntity
 @{
     Layout = "~/Views/Shared/_BaseLayout.cshtml";
     ViewBag.Title = Model.Title;
 }
 
 <style>
-    .card-header.custom-ribbon-color 
-    {
-        background-color: #A7D9ED; 
+    .card-header.custom-ribbon-color {
+        background-color: #A7D9ED;
         color: #777;
     }
-    .btn.btn-info 
-    {
+
+    .btn.btn-info {
         background-color: #A7D9ED !important;
         border-color: #A7D9ED !important;
         color: #333;
     }
+
     .board-text-content,
-    .list-group-item-action p.mb-1, 
-    .form-group textarea.form-control::placeholder 
-    {
-        color: #555; 
+    .list-group-item-action p.mb-1,
+    .form-group textarea.form-control::placeholder {
+        color: #555;
     }
+
     .list-group-item small.text-muted {
-        color: #6c757d !important; 
+        color: #6c757d !important;
     }
 </style>
 
@@ -43,29 +44,33 @@
                 </dl>
                 <hr />
                 <div class="board-text-content">
-                    @Html.Raw(Model.Text.Replace("\n", "<br />")) 
+                    @Html.Raw(Model.Text.Replace("\n", "<br />"))
                 </div>
             </div>
         </div>
 
         <div class="d-flex justify-content-center gap-3 my-4">
             @Html.ActionLink("一覧に戻る", "Index", null, new { @class = "btn btn-outline-dark" })
-            @Html.ActionLink("編集", "Edit", new { id = Model.Id }, new { @class = "btn btn-info btn-md" })
-            @Html.ActionLink("この掲示板を削除", "Delete", new { id = Model.Id }, new { @class = "btn btn-danger btn-lg" })
+
+            @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+            {
+                @Html.ActionLink("編集", "Edit", new { id = Model.Id }, new { @class = "btn btn-info btn-md" })
+                @Html.ActionLink("この掲示板を削除", "Delete", new { id = Model.Id }, new { @class = "btn btn-danger btn-lg" })
+            }
         </div>
 
         <hr class="my-4" />
 
-        <h3 class="my-4">返信</h3> 
+        <h3 class="my-4">返信</h3>
         @if (Model.Posts != null && Model.Posts.Any())
         {
             <div class="list-group mb-4">
-                
+
                 @foreach (var post in Model.Posts)
                 {
                     <div class="list-group-item list-group-item-action">
                         <p class="mb-1">@post.Text</p>
-                        <small class="text-muted text-right">投稿日時: @post.PostedDate.ToString("yyyy/MM/dd HH:mm")</small> 
+                        <small class="text-muted text-right">投稿日時: @post.PostedDate.ToString("yyyy/MM/dd HH:mm")</small>
                     </div>
                 }
             </div>
@@ -78,14 +83,14 @@
         }
 
         @* 返信投稿フォーム *@
-        <h3 class="my-4">返信を投稿する</h3> 
+        <h3 class="my-4">返信を投稿する</h3>
         <div class="card mb-4">
             <div class="card-body">
                 @using (Html.BeginForm("PostResponse", "Board", new { Id = Model.Id }, FormMethod.Post))
                 {
-                    @Html.AntiForgeryToken() 
+                    @Html.AntiForgeryToken()
                     <div class="form-group mb-3">
-                        @Html.TextArea("Text", "", new { @class = "form-control", rows = 5, placeholder = "返信内容を入力してください" }) 
+                        @Html.TextArea("Text", "", new { @class = "form-control", rows = 5, placeholder = "返信内容を入力してください" })
                     </div>
                     <div class="d-flex justify-content-end">
                         <button type="submit" value="返信を投稿" class="btn btn-info btn-md">返信を投稿</button>
@@ -96,7 +101,7 @@
 
         <hr class="my-4" />
         <div class="text-center mb-4">
-            @Html.ActionLink("ホームに戻る", "Index", "Base", null, new { @class = "btn btn-outline-dark" }) 
+            @Html.ActionLink("ホームに戻る", "Index", "Base", null, new { @class = "btn btn-outline-dark" })
         </div>
     </div>
 </div>

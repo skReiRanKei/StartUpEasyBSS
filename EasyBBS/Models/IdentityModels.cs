@@ -3,6 +3,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin;
 
 namespace EasyBBS.Models
 {
@@ -26,6 +28,31 @@ namespace EasyBBS.Models
     }
 
     /// <summary>
+    /// ロールを有効にする
+    /// </summary>
+    public class ApplicationRole : IdentityRole
+    {
+        public ApplicationRole() : base() { }
+        public ApplicationRole(string roleName) : base(roleName) { }
+    }
+
+    /// <summary>
+    /// ロール管理クラス
+    /// </summary>
+    public class ApplicationRoleManager : RoleManager<ApplicationRole>
+    {
+        public ApplicationRoleManager(IRoleStore<ApplicationRole, string> roleStore)
+            : base(roleStore)
+        {
+        }
+        // 作成
+        public static ApplicationRoleManager Create(IdentityFactoryOptions<ApplicationRoleManager> options, IOwinContext context)
+        {
+            return new ApplicationRoleManager(new RoleStore<ApplicationRole>(context.Get<ApplicationDbContext>()));
+        }
+    }
+
+    /// <summary>
     /// 既存の ApplicationDbContext を拡張して Identity の機能を取り込み
     /// </summary>
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
@@ -34,7 +61,8 @@ namespace EasyBBS.Models
         public DbSet<BoardEntity> Boards { get; set; }
         // 返信の内容
         public DbSet<BoardPostEntity> BoardPostEntities { get; set; }
-
+        // ロール
+        public DbSet<ApplicationRole> ApplicationRoles { get; set; }
 
         /// <summary>
         /// コンストラクタ
@@ -52,6 +80,7 @@ namespace EasyBBS.Models
         {
             return new ApplicationDbContext();
         }
+
 
         /// <summary>
         /// 破棄
